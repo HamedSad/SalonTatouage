@@ -10,66 +10,64 @@
 
 <jsp:include page="header.html"></jsp:include>
 
+<HR>
+
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.util.ArrayList"%>
 
-<%@ import com.mysql.jdbc.Connection%>
-<%@
+<%
+	String url = "jdbc:mysql://localhost:3306/salonTatouage";
+	String user = "root";
+	String pwd = "System84";
 
-			try {
-				Class.forName("com.mysql.jdbc.Driver");
-				
-				String url = "jdbc:mysql://localhost/salonTatouage";
-				String user= "root";
-				String pwd = "System84";
-				
-				Connection cn = (Connection) DriverManager.getConnection(url, user, pwd);
-				
-				Statement st = cn.createStatement();
-				
-				String sql = "SELECT * FROM tatoueur";
-				
-				ResultSet result = (ResultSet) st.executeQuery(sql);
-				%>	
-				
-				ArrayList<Tatoueur> listeTatoueur = new ArrayList<Tatoueur>();
-				
-					while(result.next()) {
-		<%@ 			Tatoueur affichage = new Tatoueur();
-					
-					affichage.setPseudo(result.getString("pseudo"));
-					affichage.setPays(result.getString("pays"));
-					affichage.setStyle(result.getString("style"));
-					affichage.setExperience(result.getInt("experience"));
-					
-					listeTatoueur.add(affichage);
-				}
-				%>
-				for(int i = 0 ; i < listeTatoueur.size(); i ++) {
-					
-				<%@	System.out.print(listeTatoueur.get(i).getPseudo());
-					System.out.print(" ");
-					System.out.print(listeTatoueur.get(i).getPays());
-					System.out.print(" ");
-					System.out.print(listeTatoueur.get(i).getStyle());
-					System.out.print(" ");
-					System.out.println(listeTatoueur.get(i).getExperience());
-					
-				}
-				
-				
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+	} catch (ClassNotFoundException e) {
+		e.printStackTrace();
+	}
 
+	Connection connection = null;
+	Statement statement = null;
+	ResultSet resultSet = null;
+%>
+
+<h2 align="center"><font><strong>Nos tatoueurs</strong></font></h2>
+
+<table align="center" cellpadding="4" cellspacing="4">
+	
+	<tr>
+		<td><b>Pseudo</b></td>
+		<td><b>Style du tatouage</b></td>
+		<td><b>Pays d'origine</b></td>	
+		<td><b>Années d'experience</b></td>
+	</tr>
+	<%
+		try {
+			connection = DriverManager.getConnection(url, user, pwd);
+			statement = connection.createStatement();
+			String sql = "SELECT * FROM tatoueur";
+
+			resultSet = statement.executeQuery(sql);
+			while (resultSet.next()) {
+	%>
+	<tr>
+		<td><%=resultSet.getString("pseudo")%></td>
+		<td><%=resultSet.getString("style")%></td>
+		<td><%=resultSet.getString("pays")%></td>
+		<td><%=resultSet.getInt("experience")%></td>
+	</tr>
+	<%	}
+
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-	} %>
-</body>
-</html>
+	%>
+
+<table/>
+
+<HR>
+
+<jsp:include page="footer.html"></jsp:include>
