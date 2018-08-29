@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<display-name>SalonTatouage</display-name>
+  <servlet>  
+    <servlet-name>informations</servlet-name>  
+    <jsp-file>/informations.jsp</jsp-file> 
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>informations</servlet-name>
+    <url-pattern>/informations</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>informations.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
