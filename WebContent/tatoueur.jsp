@@ -21,14 +21,18 @@
 
 <h2 align="center"><font><strong>Nos tatoueurs</strong></font></h2>
 
-
+<form action="tatoueurRecherche.jsp">
+<p>Rechercher un tatoueur ou un style : 
+<input type="search" name="rechercheTatoueur">
+<input type="submit" value="Trouver"></p>
+</form>
 <%
 	try {
 				Class.forName("com.mysql.jdbc.Driver");
 				
 				String url = "jdbc:mysql://localhost/salonTatouage";
 				String user= "root";
-				String pwd = "";
+				String pwd = "System84";
 				
 				Connection cn = (Connection) DriverManager.getConnection(url, user, pwd);
 				
@@ -66,6 +70,7 @@
 					out.print("<strong> Expérience: </strong> ");
 					out.print(listeTatoueur.get(i).getExperience());
 					out.print(" ans");
+					out.print("<hr>");
 					out.print("</ul>");
 					
 				

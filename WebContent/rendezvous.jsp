@@ -22,13 +22,12 @@
         <tr> <td>Nom</td><td><input type="text" name="nom"></td></tr>
         <tr> <td>Prenom</td><td><input type="text" name="prenom"></td></tr>
         <tr> <td>Email</td><td><input type="text" name="email"></td></tr>
-        <tr> <td>Telephone</td><td><input type="text" name="telephone"></td></tr>
-        <tr> <td>Date souhaitée (AAAA-MM-JJ)</td><td><input type="text" name="dateSouhaitee"></td></tr>
-        
-        <tr><td><input type="submit" value="Envoyer!"></td></tr>
+        <tr> <td>Telephone</td><td><input type="text" name="telephone"></td></tr>	
+        <tr> <td>Date souhaitée </td><td><input type="date" name="dateSouhaitee"></td></tr>
+        <tr> <td><input type="reset" value="Effacer"><input type="submit" value="Envoyer!"></td></tr>
         </table>
     
-    </form>
+</form>
     
 <HR>
 
