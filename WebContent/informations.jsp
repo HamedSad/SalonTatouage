@@ -25,7 +25,7 @@
         <tr> <td>Email</td><td><input type="text" name="email"></td></tr>
         <tr> <td>Telephone</td><td><input type="text" name="telephone"></td></tr>
         <tr> <td>Objet</td><td><input type="text" name="object"></td></tr>
-        <tr> <td>Message</td><td><input type="text" name="message"></td></tr>
+        <tr> <td>Message</td><td><input type="textarea" name="message"></td></tr>
         
         <tr><td><input type="submit" value="Envoyer!"></td></tr>
         </table>

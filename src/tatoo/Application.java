@@ -1,3 +1,4 @@
+package tatoo;
 
 
 import java.sql.DriverManager;
@@ -11,7 +12,6 @@ import com.mysql.jdbc.Connection;
 public class Application {
 
 	public static void main(String[] args) {
-		
 		
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
@@ -28,7 +28,7 @@ public class Application {
 				
 				ResultSet result = (ResultSet) st.executeQuery(sql);
 				
-				ArrayList<Tatoueur> listeTatoueur = new ArrayList<Tatoueur>();
+				ArrayList<Tatoueur> listeTatoueur = new ArrayList<Tatoueur>();  
 				
 				while(result.next()) {
 					Tatoueur affichage = new Tatoueur();
@@ -50,9 +50,7 @@ public class Application {
 					System.out.print(listeTatoueur.get(i).getStyle());
 					System.out.print(" ");
 					System.out.println(listeTatoueur.get(i).getExperience());
-					
-				}
-				
+				}	
 					
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -61,6 +59,5 @@ public class Application {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
 		}
 	}

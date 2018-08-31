@@ -1,3 +1,4 @@
+package tatoo;
 
 public class Tatoueur {
 	
@@ -30,7 +31,5 @@ public class Tatoueur {
 	public void setExperience(int experience) {
 		this.experience = experience;
 	}
-	
-	
 	
 }
