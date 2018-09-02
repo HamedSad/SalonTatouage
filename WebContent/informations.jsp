@@ -11,28 +11,22 @@
 
 <jsp:include page="header.html"></jsp:include>
 
-
 <HR>
-
-<h1>Formulaire d'information</h1>
+<h2><font><strong>Formulaire d'information</strong></font></h2>
 
 <p>Si tu as la moindre question concernant le tatouage, remplis le formulaire ci-dessous</p>
 
 <form action="informationsSave.jsp">
-    
-        <table>
-        
+        <table>        
         <tr> <td>Nom</td><td><input type="text" name="nom"></td></tr>
         <tr> <td>Prénom</td><td><input type="text" name="prenom"></td></tr>
         <tr> <td>Email</td><td><input type="text" name="email"></td></tr>
         <tr> <td>Telephone</td><td><input type="text" name="telephone"></td></tr>
         <tr> <td>Objet</td><td><input type="text" size="50" name="object"></td></tr>
         <tr> <td>Message</td><td><textarea name="message"></textarea></td></tr>
-        <tr> <td><input type="reset" value="Effacer"><input type="submit" value="Envoyer!"></td></tr>
-        
-        </table>
-    
-    </form>
+        <tr> <td><input type="reset" value="Effacer"><input type="submit" value="Envoyer!"></td></tr>        
+        </table> 
+</form>
     
 <HR>
 

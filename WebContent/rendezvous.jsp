@@ -12,8 +12,7 @@
 <jsp:include page="header.html"></jsp:include>
 
 <HR>
-
-<h1>Prise de rendez-vous</h1>
+<h2><font><strong>Prise de rendez-vous</strong></font></h2>
 
 <p>Pour une prise de rendez-vous, note tes disponibilités, nous te contacterons au plus vite</p>
 

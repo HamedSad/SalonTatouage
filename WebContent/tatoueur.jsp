@@ -20,13 +20,12 @@
 
 <jsp:include page="header.html"></jsp:include>
 
-<h2 align="center"><font><strong>Nos tatoueurs</strong></font></h2>
-
-
-
 <form action="tatoueurRecherche.jsp"><p>Rechercher un tatoueur ou un style : 
 <input type="text" name="search"><input type="submit" value="Trouver!"></p>
 </form>
+
+<h2><font><strong>Nos tatoueurs</strong></font></h2>
+
 <%
 	try {
 				Class.forName("com.mysql.jdbc.Driver");

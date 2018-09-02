@@ -30,6 +30,8 @@
 	 
 	<p>Il existe différentes couleurs d'encre et même une encre transparente qui ne réagit qu'à la lumière noire : 
 	ce type de tatouage est appelé tatouage « UV » ou « Blacklight ».  </p>
+	
+	<p align="right"><em>Source : Wikipedia</em></p>
 
 	<HR>
 	
