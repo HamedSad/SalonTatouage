@@ -13,7 +13,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Tatoueur</title>
+<title>Tatoueurs</title>
+<link rel="icon" type="image/png" href="Image/Tattoo-gun.png" />
 </head>
 <body>
 
@@ -21,10 +22,10 @@
 
 <h2 align="center"><font><strong>Nos tatoueurs</strong></font></h2>
 
-<form action="tatoueurRecherche.jsp">
-<p>Rechercher un tatoueur ou un style : 
-<input type="search" name="rechercheTatoueur">
-<input type="submit" value="Trouver"></p>
+
+
+<form action="tatoueurRecherche.jsp"><p>Rechercher un tatoueur ou un style : 
+<input type="text" name="search"><input type="submit" value="Trouver!"></p>
 </form>
 <%
 	try {
@@ -72,8 +73,6 @@
 					out.print(" ans");
 					out.print("<hr>");
 					out.print("</ul>");
-					
-				
 
 				}	
 					
@@ -86,5 +85,6 @@
 				e.printStackTrace();
 			}
 %>
+<jsp:include page="footer.html"></jsp:include>
 </body>
 </html>

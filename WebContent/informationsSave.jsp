@@ -30,12 +30,16 @@
             
             
             if(i>0){
-            %>
-                <jsp:forward page="informations.jsp"></jsp:forward>
+            	
+            %>	
+            	<jsp:include page="header.html"></jsp:include>
+            	<p> Le massage a bien été envoyé</p>
+            	<p> Nous t'invitons à consulter les photos du dernier salon du tatouage</p>
+                <jsp:include page="footer.html"></jsp:include>
             <% 
             }
             else{
-                out.print("sorry!please fill correct detail and try again" );
+                out.print("Merci de remplir correctement les champs prévus à cet effet" );
             }
                 
  }

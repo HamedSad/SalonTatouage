@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Informations</title>
+<link rel="icon" type="image/png" href="Image/Tattoo-gun.png" />
 </head>
 <body>
 
